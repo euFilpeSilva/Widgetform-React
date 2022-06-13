@@ -1,17 +1,34 @@
 import CloseButton from "./CloseButton"
 
+import bugImageUrl from "../assets/bug.svg"
+import ideaImageUrl from "../assets/idea.svg"
+import thoughtImageUrl from "../assets/thought.svg"
+
+
 const FeedbackTypes = {
     BUG: {
         title: "Problema",
+        image: {
+            source: bugImageUrl,
+            alt: "Imagem de um inseto"
+        }
     },
     IDEA: {
         title: "Ideia",
+        image: {
+            source: ideaImageUrl,
+            alt: "imagem de uma lampada"
+        }
     },
     OTHER: {
         title: "Outro",
-    }
+        image: {
+            source: thoughtImageUrl,
+            alt: "Imagem de um balão"
+        }
+    },
 }
-    
+
 
 export default function WidgetForm() {
     return (

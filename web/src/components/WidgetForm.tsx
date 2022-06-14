@@ -42,6 +42,7 @@ export default function WidgetForm() {
                 { Object.entries(FeedbackTypes).map(([key, value]) => {
                     return (
                         <button>
+                            <img src={value.image.source} alt={value.image.source} />
                             <span>{value.title}</span>
                         </button>
                     );

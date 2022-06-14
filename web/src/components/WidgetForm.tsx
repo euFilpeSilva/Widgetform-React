@@ -39,7 +39,13 @@ export default function WidgetForm() {
            </header>
 
               <div className="text-xs text-neutral-400 w-full">
-                
+                { Object.entries(FeedbackTypes).map(([key, value]) => {
+                    return (
+                        <button>
+                            <span>{value.title}</span>
+                        </button>
+                    );
+                })}
               </div>
               
            <footer className="text-xs text-natural-400">

@@ -1,4 +1,5 @@
 import { FeedbackType, FeedbackTypes } from "..";
+import CloseButton from "../../CloseButton";
 
 interface  FeedbackTypeStepProps {
     onFeedbackTypeChanged: (type: FeedbackType) => void
@@ -7,6 +8,11 @@ interface  FeedbackTypeStepProps {
 
 export default function FeedbackTypeStep({onFeedbackTypeChanged}: FeedbackTypeStepProps) {
     return (
+        <>
+        <header>
+        <span className="text-xl leading-6">Deixe seu Feedback</span>
+         <CloseButton/>
+        </header>
         <div className="flex py-8 gap-2 w-full">
         { Object.entries(FeedbackTypes).map(([key, value]) => {
             return (
@@ -22,5 +28,6 @@ export default function FeedbackTypeStep({onFeedbackTypeChanged}: FeedbackTypeSt
             );
         })}
       </div>
+        </>
     )
 }

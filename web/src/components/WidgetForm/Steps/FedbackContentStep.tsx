@@ -14,7 +14,7 @@ export default function FeedbackContentStep({feedbackType,
     return (
         <>
         <header>
-            <button type="button" className="top- left-5 absolut text-zinc-400 hover:text-zinc-100"
+            <button type="button" className="top-5 left-5 absolute text-zinc-400 hover:text-zinc-100"
              onClick={onFeedbackRestartRequested}
             >
                 <ArrowLeft weight="bold" className="w-4 h-4"/>

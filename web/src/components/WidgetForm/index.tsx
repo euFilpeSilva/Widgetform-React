@@ -4,12 +4,12 @@ import bugImageUrl from "../../assets/bug.svg"
 import ideaImageUrl from "../../assets/idea.svg"
 import thoughtImageUrl from "../../assets/thought.svg"
 import { useState } from "react"
-import FeedbackTypeStep from "./Steps/feedbackTypeStep"
+import FeedbackTypeStep from "./Steps/FeedbackTypeStep"
 import FeedbackContentStep from './Steps/FedbackContentStep';
 
 
 
-export const FeedbackTypes = {
+export const feedbackTypes = {
     BUG: {
         title: "Problema",
         image: {
@@ -33,7 +33,7 @@ export const FeedbackTypes = {
     },
 }
 
-export type FeedbackType = keyof typeof FeedbackTypes;
+export type FeedbackType = keyof typeof feedbackTypes;
 
 export default function WidgetForm() {
     const [ feedbackType, setFeedbackType ] = useState<FeedbackType | null>(null)
@@ -47,7 +47,7 @@ export default function WidgetForm() {
                 <FeedbackTypeStep onFeedbackTypeChanged={setFeedbackType}/>
                
              ): (
-                <FeedbackContentStep/>
+                <FeedbackContentStep feedbackType={feedbackType}/>
              )}
               
            <footer className="text-xs text-natural-400">

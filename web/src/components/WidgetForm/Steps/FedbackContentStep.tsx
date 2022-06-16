@@ -35,7 +35,7 @@ export default function FeedbackContentStep({feedbackType,
                 type="submit"
                 className="p-2 bg-brand-500 rounded-md border-transparent flex-1 flex justify-center items-center text-sm hover:bg-brand-300 focus-outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offfset-zinc-900 focus:ring-brand-500 transittion-colors"
                 >
-                    Enviar Feedback
+                    Enviar Feedback  
                 </button>
             </footer>
         </form>

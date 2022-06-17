@@ -1,10 +1,17 @@
 import html2canvas from "html2canvas";
 import { Camera } from "phosphor-react";
+import { useState } from "react";
 
 export default function ScreenshotButton() {
+    const [isTakingScreenshotButton, setIsTakingScreenshotButton] = useState(false);
+
    async function handleTakeScreenShot() {
+        setIsTakingScreenshotButton(true);
+
     const canvas = await html2canvas(document.querySelector('html')!); //tira um print
     const base64image = canvas.toDataURL('image/png');  // converte print pra png no formato base64 que é em formato de texto e representa uma imagem
+
+    setIsTakingScreenshotButton(false);
     }
     return (
         <button

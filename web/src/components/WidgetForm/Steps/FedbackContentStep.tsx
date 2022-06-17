@@ -4,6 +4,7 @@ import { FeedbackType, feedbackTypes } from "..";
 import CloseButton from "../../CloseButton";
 import ScreenshotButton from "../ScreenShotButton";
 
+
 interface FeedbackContentStepProps {
     feedbackType: FeedbackType;
     onFeedbackRestartRequested: () => void;
@@ -11,7 +12,7 @@ interface FeedbackContentStepProps {
 
 export default function FeedbackContentStep({feedbackType,
     onFeedbackRestartRequested}: FeedbackContentStepProps) {
-    const [screenshot, setScreenshot] = useState <string | null>(null);
+    const [screenshot, setScreenshot] = useState <string | null>(null); //Sabe quando o print foi tirado
 
     const feedbackTypeInfo = feedbackTypes[feedbackType];
     return (
@@ -35,6 +36,7 @@ export default function FeedbackContentStep({feedbackType,
             />
             <footer className="flex gap-2 mt-2">
                <ScreenshotButton
+                screenshot={screenshot}
                 onScreenshotTook ={setScreenshot}
                />
                 <button

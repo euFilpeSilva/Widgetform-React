@@ -8,10 +8,11 @@ import ScreenshotButton from "../ScreenShotButton";
 interface FeedbackContentStepProps {
     feedbackType: FeedbackType;
     onFeedbackRestartRequested: () => void;
+    onFeedbackSent: () => void;
 }
 
 export default function FeedbackContentStep({feedbackType,
-    onFeedbackRestartRequested}: FeedbackContentStepProps) {
+    onFeedbackRestartRequested, onFeedbackSent}: FeedbackContentStepProps) {
     const [screenshot, setScreenshot] = useState <string |null>(null); //Sabe quando o print foi tirado
     const [comment, setComment] = useState(""); // Quando é digitado qualquer coisa na textarea o valor desse estado é atualizado
 
@@ -24,7 +25,7 @@ export default function FeedbackContentStep({feedbackType,
                     screenshot,
                     comment,
                 })
-                
+                onFeedbackSent()
             }
 
     return (

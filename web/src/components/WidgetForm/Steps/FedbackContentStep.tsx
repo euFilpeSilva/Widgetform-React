@@ -12,7 +12,7 @@ interface FeedbackContentStepProps {
 
 export default function FeedbackContentStep({feedbackType,
     onFeedbackRestartRequested}: FeedbackContentStepProps) {
-    const [screenshot, setScreenshot] = useState <string | null>(null); //Sabe quando o print foi tirado
+    const [screenshot, setScreenshot] = useState <String |null>(null); //Sabe quando o print foi tirado
 
     const feedbackTypeInfo = feedbackTypes[feedbackType];
     return (

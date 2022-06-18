@@ -8,7 +8,8 @@ interface ScreenshotButtonProps {
     onScreenshotTook: (screenshot: string) => void;
 } 
 
-export default function ScreenshotButton({screenshot, onScreenshotTook}: ScreenshotButtonProps) {
+export default function ScreenshotButton({screenshot,
+     onScreenshotTook}:ScreenshotButtonProps) {
     const [isTakingScreenshot, setIsTakingScreenshot] = useState(false);
 
    async function handleTakeScreenShot() {
@@ -26,7 +27,12 @@ export default function ScreenshotButton({screenshot, onScreenshotTook}: Screens
         <button
             type="button"
             className="p-1 w-10 h-10 rounded-md border-transparent flex justify-end items-end text-zinc-400 hover:text-zinc-100 transition-colors"
-            >
+            style={{
+            backgroundImage: `url(${screenshot})`,
+            backgroundPosition: 'right bottom',
+            backgroundSize: 180,
+        }} //exibe imagem do print no botão 
+        >
                 <Trash weight="fill"/>
         </button>
         )

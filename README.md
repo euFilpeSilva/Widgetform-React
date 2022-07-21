@@ -5,17 +5,17 @@ Card de feedback
 
 *Tesnologias/libs:
  
- *react
- *types/react
- *Tailwindcss, tailwind-scrollbar
- *phosphor-react
- *vitejs/plugin-react
- *typescript
- *Postcss
- *Autoprefixer
- *headlessui/react
- *html2canvas
- *react-dom
+ * react
+ * types/react
+ * Tailwindcss, tailwind-scrollbar
+ * phosphor-react
+ * vitejs/plugin-react
+ * typescript
+ * Postcss
+ * Autoprefixer
+ * headlessui/react
+ * html2canvas
+ * react-dom
  
  ![](src/assets/longoTelaMaior.gif)
  

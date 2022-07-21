@@ -5,3 +5,5 @@ Card de feedback
 
 
  <img src="src\assets\longoTelaMaior.gif">
+ 
+ ![](src/assets/longoTelaMaior.gif)

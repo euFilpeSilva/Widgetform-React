@@ -3,7 +3,7 @@ Card de feedback
 
 ## Exercitando habilidades com React TS.
 
-## Tesnologias/libs:
+## Tecnologias/libs:
  
  * react
  * types/react

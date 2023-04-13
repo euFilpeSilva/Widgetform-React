@@ -7,11 +7,10 @@ Card de feedback
  
  * react
  * types/react
- * Tailwindcss, tailwind-scrollbar
  * phosphor-react
  * vitejs/plugin-react
  * typescript
- * Postcss
+ * Postcss/Tailwindcss
  * Autoprefixer
  * headlessui/react
  * html2canvas
